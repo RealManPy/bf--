@@ -1,3 +1,13 @@
+
+const plus = 'RanIsAKingAndAkivaIsAPartyPooper';
+const minus = plus + plus;
+const left = plus + plus + plus;
+const right = plus + plus + plus + plus;
+const comma = plus + plus + plus + plus + plus;
+const period = plus + plus + plus + plus + plus + plus;
+const lBracket = plus + plus + plus + plus + plus + plus + plus;
+const rBracket = plus + plus + plus + plus + plus + plus + plus + plus;
+
 document.addEventListener('DOMContentLoaded', function() {
   const runInterpreterButton = document.getElementById('runInterpreter');
   const translateButton = document.getElementById('translateToBFPP');
@@ -26,21 +36,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const commands = code.trim().split(/\s+/);
     const convertedCode = commands.map(command => {
       switch (command) {
-        case '.':
+        case plus:
           return '+';
-        case '..':
+        case minus:
           return '-';
-        case '...':
+        case left:
           return '<';
-        case '....':
+        case right:
           return '>';
-        case '.....':
+        case comma:
           return ',';
-        case '......':
+        case period:
           return '.';
-        case '.......':
+        case lBracket:
           return '[';
-        case '........':
+        case rBracket:
           return ']';
         default:
           return '';
@@ -109,28 +119,28 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < code.length; i++) {
       switch (code[i]) {
         case '+':
-          translatedCode += '.';
+          translatedCode += plus;
           break;
         case '-':
-          translatedCode += '..';
+          translatedCode += minus;
           break;
         case '<':
-          translatedCode += '...';
+          translatedCode += left;
           break;
         case '>':
-          translatedCode += '....';
+          translatedCode += right;
           break;
         case ',':
-          translatedCode += '.....';
+          translatedCode += comma;
           break;
         case '.':
-          translatedCode += '......';
+          translatedCode += period;
           break;
         case '[':
-          translatedCode += '.......';
+          translatedCode += lBracket;
           break;
         case ']':
-          translatedCode += '........';
+          translatedCode += rBracket;
           break;
         default:
           // Ignore unrecognized characters or sequences
